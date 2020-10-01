@@ -1,10 +1,10 @@
 var basketball = {
-	"async": true,
+    "async": true,
 	"crossDomain": true,
 	"url": "https://api-nba-v1.p.rapidapi.com/players/lastName/james",
 	"method": "GET",
 	"headers": {
-		"x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
+        "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
 		"x-rapidapi-key": "b5a492aa05msh6869ac7f6671576p14fe03jsn3366a114fc88"
 	}
 }
@@ -18,17 +18,3 @@ function searchApi() {
         
     });
 }
-// var settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": "https://football-pro.p.rapidapi.com/api/v2.0/players/search/neymar",
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "football-pro.p.rapidapi.com",
-// 		"x-rapidapi-key": "b5a492aa05msh6869ac7f6671576p14fe03jsn3366a114fc88"
-// 	}
-// }
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
