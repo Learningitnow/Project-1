@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NotEspn</title>
     <link  rel="stylesheet" href="style.css">
+    <link  rel="stylesheet" href="./stylesseartbox.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous">
@@ -14,7 +15,7 @@
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">NotEspn</a>
+        <a class="navbar-brand" href="index.html">NotEspn</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,7 +26,7 @@
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="basketball.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Basketball
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -36,7 +37,7 @@
                 </div>
               </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="soccer.html" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true"  aria-expanded="false">
                 Soccer
               </a>
@@ -49,19 +50,22 @@
             </li>
             
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input id="searchBox" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button id ="searchBtn" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <div class="form-inline my-2 my-lg-0">
+            <input type="text" id="searchBox">
+            <button onClick="searchApi()" id ="searchBtn" class="btn btn-outline-success my-2 my-sm-0">Search</button>
+          </div>
         </div>
     </nav>
-
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-      <form class="form-inline my-2 my-lg-0" id='searchThings'>
-        <input id="searchBox" class="form-control" type="search" placeholder="Search" aria-label="Search">
-        <button id ="searchBtn" class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-        <div class="carousel-inner">
+    
+    <!-- 
+      <div class="input-group mb-3" id='searchThings'>
+        <input type="text" class="form-control" placeholder="Search Players, Teams" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button id ="searchBtn" class="btn btn-outline-secondary" type="button" type="submit">Search</button>
+        </div>
+      </div> -->
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
           <div class="carousel-item active">
               <img src="https://www.nba.com/dam/assets/160215001056-russell-westbrook-2016-nba-all-star-game.1200x672.jpeg" class="d-block w-100" alt="toronto raptors">
           </div>
@@ -95,11 +99,9 @@
           <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">NBA Finals 2020: Schedules, news, odds and latest updates for Miami Heat vs. Los Angeles Lakers</h5>
-                <video width="300" height="150" controls>
-                  <source src="http://www.espn.com/video/clip?id=30013133">
-                </video>
-                <a href="https://www.espn.com/nba/story/_/id/29647539/nba-finals-2020-schedules-news-odds-latest-updates-miami-heat-vs-los-angeles-lakers" target="_blank" class="btn btn-primary">Learn more</a>
+                <h5 class="card-title">NBA Finals: Where do NBA coaches get their plays?</h5>
+                <img src="https://a.espncdn.com/photo/2020/0930/nba_coach_plays_NEW_16x9.jpg" alt="coaches with palyers">
+                <a href="https://www.espn.com/nba/story/_/id/29946346/nba-finals-where-do-nba-coaches-get-their-plays" target="_blank" class="btn btn-primary">Learn more</a>
               </div>
             </div>
           </div>
@@ -120,27 +122,27 @@
           <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">European kit power rankings: Which Champions League, Europa League giant is 2020-21's most stylish?</h5>
+                <img src="https://www.telegraph.co.uk/content/dam/football/2019/08/08/19-20-kits_trans_NvBQzQNjv4BqnntzVh6i2V8vnWmVeYqabhk1mDTumCeH_NeArSD702I.jpg?imwidth=450" alt="Shirts">
+                <a href="https://www.espn.com/soccer/blog-the-toe-poke/story/4177826/european-kit-power-rankings-which-champions-leagueeuropa-league-giant-is-2020-21s-most-stylish" target="_blank" class="btn btn-primary">Learn more</a>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Barcelona sign USMNT defender Sergino Dest from Ajax on long-term deal</h5>
+                <img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2020%2F0918%2Fr747394_1296x729_16%2D9.jpg" alt="Sergino Dest">
+                <a href="https://www.espn.com/soccer/soccer-transfers/story/4190907/barcelona-sign-usmnt-defender-sergino-dest-from-ajax-on-long-term-deal" target="_blank" class="btn btn-primary">Learn more</a>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="card">
               <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">Champions League draw: Ronaldo's Juventus to face Messi's Barcelona, PSG vs. Man United</h5>
+                <img src="https://a.espncdn.com/photo/2020/1001/r754176_1296x729_16-9.png" alt="Ronaldo and Messi">
+                <a href="https://www.espn.com/soccer/uefa-champions-league/story/4197293/live-uefa-champions-league-group-draw-for-2020" target="_blank" class="btn btn-primary">Learn more</a>
               </div>
             </div>
           </div>
