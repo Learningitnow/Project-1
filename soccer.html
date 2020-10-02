@@ -21,28 +21,27 @@
         <li class="nav-item ">
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item dropdown ">
-            <a class="nav-link dropdown-toggle" href="basketball.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="nav-item">
+            <a class="nav-link" href="basketball.html">
               Basketball
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="basketball.html">Player</a>
               <a class="dropdown-item" href="basketball.html">Team</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="basketball.html">Stats</a>
-            </div>
+            </div> -->
           </li>
-        <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" href="soccer.html" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true"  aria-expanded="false">
+        <li class="nav-item">
+          <a class="nav-link" href="soccer.html">
             Soccer
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="soccer.html">Player</a>
             <a class="dropdown-item" href="soccer.html">Team</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="soccer.html">Stats</a>
-          </div>
+          </div> -->
         </li>
         
       </ul>
@@ -57,39 +56,59 @@
   <section class="searchPage box active-slide">
     <img id="searchImg" src="https://www.footballtalk.org/wp-content/uploads/2020/07/best-players-in-premier-league-2020.jpg" alt="Really cool image about soccer">
     <div>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" id="soccerSearchBox" placeholder="Search Player Name" >
-        <div class="input-group-append">
-          <button id="soccerSearchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changesoccerSlide()">Search</button>
+      <div class="input-group mb-3" style="gap: 50px;">
+        <div>
+          <div class="input-group-append">
+            <input type="text" class="form-control" id="soccerSearchBox" placeholder="Search Player Name" size="30">
+
+            <button id="soccerSearchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide(event)">Search</button>
+          </div>
+        </div>
+        <div>
+          <div class="input-group-append">
+            <input type="text" class="form-control" id="soccerSearchTeamBox" placeholder="Search Team Name" size="30">
+        
+            <button id="soccerSearchTeamBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide(event)">Search</button>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="searchResults box hide " style="justify-content: start; align-items:flex-start;">
+  <section class="searchResults box hide " id="searchContainer" style="justify-content: start; align-items:flex-start;">
     <div class=card-grid>
-      <div class="row">
-        <div class="col" id="soccerName"></div>
-        <div class="col" id="soccerPlayerImg"><img src="#" alt="Player Portrait"></div>
+        <div id="soccerName"></div>
+        <div id="soccerPlayerImg"></div>
+        <div id="soccerTeamImg"></div>
+        <div id="soccerInfo"></div>
+        <div>
+          <div class="input-group-append" id="soccerSearch">
+            <input type="text" class="form-control" id="soccerSearchBox" placeholder="Search Player Name" size="30">
+            <button id="soccerSearchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide(event)">Search</button>
+          </div>
+        </div>
+        <div>
+          <div class="input-group-append" id="soccerTeamSearch">
+            <input type="text" class="form-control" id="soccerSearchTeamBox" placeholder="Search Team Name" size="30">
+            <button id="soccerSearchTeamBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide(event)">Search</button>
+          </div>
+        </div>
       </div>
-      <div class="row">
-        <div class="col" id="soccerInfo"></div>
-      </div>
+      
     </div>
+    
   </section>
 
-  <aside>
-    <div class="row">
+  <aside class="aside" id="soccerMoreInfo" style="background-color: #00cc99;">
       <h1>Matches this week</h1>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 table">
+    <div class="row soccerMatches">
+      <div class="col-sm-3 table">
         EPL
       </div>
-      <div class="col-sm-4 table">
+      <div class="col-sm-3 table">
         La Liga
       </div>
-      <div class="col-sm-4 table">
+      <div class="col-sm-3 table">
         Bundesliga
       </div>
     </div>

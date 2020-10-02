@@ -20,28 +20,27 @@
         <li class="nav-item ">
           <a class="nav-link" href="index.html">Home</a>
         </li>
-        <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="basketball.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">(current)</span>
+        <li class="nav-item">
+            <a class="nav-link" href="basketball.html"><span class="sr-only">(current)</span>
               Basketball
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="basketball.html">Player</a>
               <a class="dropdown-item" href="basketball.html">Team</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="basketball.html">Stats</a>
-            </div>
+            </div> -->
           </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="soccer.html" id="navbarDropdown" role="button" data-toggle="dropdown"
-          aria-haspopup="true"  aria-expanded="false">
+        <li class="nav-item">
+          <a class="nav-link" href="soccer.html" >
             Soccer
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="soccer.html">Player</a>
             <a class="dropdown-item" href="soccer.html">Team</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="soccer.html">Stats</a>
-          </div>
+          </div> -->
         </li>
         
       </ul>
@@ -56,29 +55,43 @@
   <section class="searchPage box active-slide">
     <img id="searchImg" src="https://www.si.com/.image/t_share/MTY3NTEwNDI2MDM1MTY5MTY2/nba-season-2020.jpg" alt="Really cool image about basketball">
     <div>
-      <div class="input-group mb-3">
-        <input id="searchBox" type="text" class="form-control" placeholder="Search Last Name">
-        <div class="input-group-append">
-          <button id="searchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide()">Search</button>
+      <div class="input-group mb-3" style="gap: 50px;">
+        <div>
+          <div class="input-group-append">
+            <input id="searchBox" type="text" class="form-control" placeholder="Search Player Name" size="30">
+          
+            <button id="searchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide(event)">Search</button>
+          </div>
         </div>
+        <div>
+          <div class="input-group-append">
+            <input id="searchTeamBox" class="form-control" placeholder="Search Team Name" type="text" size="30">
+            <button id="searchTeamBtn" class="btn btn-outline-secondary" onClick="changeSlide(event)">Search</button>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
 
-  <section class="searchResults box hide" style="justify-content: start; align-items:flex-start;">
-    <div class=card-grid>
-      <div class="row">
-        <div class="col" id="name"></div>
-        <div class="col" id="playerImg"><img src="#" alt="Player Portrait"></div>
+  <section class="searchResults box hide"> 
+    
+      <div id="bbName"></div>
+      <!-- <div id="playerImg"><img src="https://via.placeholder.com/200" alt="Player Portrait"></div> -->
+      <div id="info"></div>
+      <div id="image"></div>
+      <div id="standings"></div>
       </div>
-      <div class="row">
-        <div class="col" id="info"></div>
-      </div>
-    </div>
+    
     
   </section>
 
+  <aside class="aside" id="MoreInfo" style="background-color: #ff9966;">
+    <h1>Matches this week</h1>
   
+    </div>
+  </aside>
+
 </main>
 
 <footer class="navbar bg-dark d-flex justify-content-center" >

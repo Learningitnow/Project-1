@@ -5,13 +5,24 @@ background-color: #1f1f2e !important;
 
 .container h2{
     color: white;
-    
+    margin: 0 auto;
 
+}
+
+#welcome-text{
+    color: white; 
+    position: absolute;
+    z-index: 3;
+    top:10em;
+    left:13em;
+    font-family: 'Cinzel', serif;
+    text-align: center;
 }
 
 .search-container{
     /* border: 2px solid red; */
     height: 100vh;
+    position: relative;
 }
 
 .card-grid{
@@ -20,8 +31,14 @@ background-color: #1f1f2e !important;
     gap: 50px;
 }
 
-.carousel-inner img{
+.card{
+    min-height: 400px;
+    max-height: 400px;
+}
+
+.carousel img {
  max-height: 100vh;
+ 
 }
 
 footer{
@@ -32,21 +49,39 @@ footer{
 
     align-items: center;
     bottom: 0px;
+    margin-top: 20px;
+    z-index: 1;
+    /* position: relative; */
+}
+
+footer p{
+    margin: 0 auto;
 }
 
 nav, footer{
     opacity: 60%;
     z-index:2;
+    
 }
 
 .bg-dark:hover{
     color: orange !important;
 }
 
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    box-shadow: 10px 10px 5px black;
+}
+
 .card-body img{
     max-width: 300px;
     margin-bottom: 15px;
+    
 }
+
 
 .hide{
     display: none !important;
@@ -58,7 +93,6 @@ nav, footer{
 }
 
 .box{
-    /* background-color: white; */
     box-sizing: border-box;
     /* border: 2px solid yellow; */
     width: 90vw;
@@ -76,45 +110,139 @@ nav, footer{
  background-color: white;
  border-radius: 15px;
  box-shadow: 10px 10px 5px black;
- opacity: 60%;
+ opacity: 90%;
+ position: relative;
 }
 
 #searchImg{
     z-index: 0;
-    opacity: 30%;
+    opacity: 50%;
     position: absolute;
-    top: 0px;
+    top: -45px;
     object-position: 5px 10%;
-    height: 800px;
+    height: 833px;
+
 }
 
-aside{
-    background-color: #00cc99;
-    display: flex;
-    gap: 20px;
+.aside{
     position: relative;
-    width: 80vw;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+    top: 7%;
+    width: 100%;
+    left: 0px;
+    text-align:center;
+    height: 600px;
 }
 
 .table{
-    background-color: gray;
-    width: 200px;
+    background-color:lightgray;
+    width: 10px !important;
     height: 300px;
     border: 2px solid black;
     margin: 2px 2px 2px 2px;
+    opacity: 90%;
+    left: 50px;
+    top: 50px;
+}
+
+#name, #soccerName{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#playerImg, #soccerPlayerImg{
+    position: absolute;
+    left: 10px;
+    top: 100px;
+}
+
+#soccerTeamImg img {
+    margin-top: 4em;
+    margin-left: 1em;
+    width: 15em;
+    height: 15em;    
+}
+
+#info, #soccerInfo{
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 75px;
+}
+
+#soccerSearch{
+    z-index: 2;
+    bottom: 0px;
+    position: absolute;
+
+}
+
+#standings {
+    position: absolute;
+    right: 20px;
+}
+
+#bbName {
+    text-decoration: underline;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.title {
+    font-weight: bolder;
+    font-size: 40px;
+}
+
+.teamInfo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.recordInfo {
+    font-size: 25px;
+}
+
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+#info {
+    position: absolute;
+    left: 20px;
+    margin: 10px;
+}
+aside{
+    padding: 0 20px;
+}
+
+aside div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     
 }
 
-#name{
-    border: 2px solid red;
-    position: relative;
-}
-
-#info{
-    font-size: 12px;
-    border: 2px solid red;
-    position: relative;
-}
