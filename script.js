@@ -143,7 +143,10 @@ function soccerPlayerSearch(){
         method: "GET",
         headers: {
             "x-rapidapi-host": "football-pro.p.rapidapi.com",
-            ""
+            "x-rapidapi-key": "b5a492aa05msh6869ac7f6671576p14fe03jsn3366a114fc88",
+        }
+    })
+        .then(function(response) { 
         console.log(response);
         var soccerInfo = response.data[0]
         console.log(soccerInfo.birthcountry)
@@ -153,11 +156,10 @@ function soccerPlayerSearch(){
         `<p>Date of Birth: ${soccerInfo.birthdate}</p>
         <p>Height: ${soccerInfo.height}</p>
         <p>Weight: ${soccerInfo.weight}</p>
-        <p>Place of Birth: ${soccerInfo.birthplace}, ${soccerInfo.birthcountry}</p>
-        `
+        <p>Place of Birth: ${soccerInfo.birthplace}, ${soccerInfo.birthcountry}</p>`
 
     })
-}``
+}
 
 function soccerTeamSearch(){
 
