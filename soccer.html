@@ -55,27 +55,45 @@
 <main class="search-container">
   
   <section class="searchPage box active-slide">
-    <img src="#" alt="Really cool image about basketball">
+    <img id="searchImg" src="https://www.footballtalk.org/wp-content/uploads/2020/07/best-players-in-premier-league-2020.jpg" alt="Really cool image about soccer">
     <div>
       <div class="input-group mb-3">
-        <input type="text" class="form-control" id="soccerSearchBox" placeholder="Search a player by their name" >
+        <input type="text" class="form-control" id="soccerSearchBox" placeholder="Search Player Name" >
         <div class="input-group-append">
-          <button id="soccerSearchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changeSlide()">Search</button>
+          <button id="soccerSearchBtn" class="btn btn-outline-secondary" type="button" type="submit" onClick="changesoccerSlide()">Search</button>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="searchResults box hide">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 id="soccerName"></h3>
-      <div>
-        <div class="col-sm-6">
-          <p class="soccerInfo"></p>
-        <div>
+  <section class="searchResults box hide " style="justify-content: start; align-items:flex-start;">
+    <div class=card-grid>
+      <div class="row">
+        <div class="col" id="soccerName"></div>
+        <div class="col" id="soccerPlayerImg"><img src="#" alt="Player Portrait"></div>
+      </div>
+      <div class="row">
+        <div class="col" id="soccerInfo"></div>
+      </div>
     </div>
   </section>
+
+  <aside>
+    <div class="row">
+      <h1>Matches this week</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-4 table">
+        EPL
+      </div>
+      <div class="col-sm-4 table">
+        La Liga
+      </div>
+      <div class="col-sm-4 table">
+        Bundesliga
+      </div>
+    </div>
+  </aside>
 </main>
 
 <footer class=" navbar bg-dark d-flex justify-content-center" >

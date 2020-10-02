@@ -1,3 +1,7 @@
+
+// us try.. catch(err) .. for Error 404 page
+
+
 // var basketball = {
     //     "async": true,
     // 	"crossDomain": true,
@@ -9,6 +13,17 @@
         // 	}
         // }
 function changeSlide(){
+    
+    document.querySelector('.searchPage').classList.remove('active-slide')
+    document.querySelector('.searchPage').classList.add('hide')
+    document.querySelector('.searchResults').classList.add('active-slide')
+    document.querySelector('.searchResults').classList.remove('hide')
+    
+    searchApi()
+    
+}
+
+function changesoccerSlide(){
     
     document.querySelector('.searchPage').classList.remove('active-slide')
     document.querySelector('.searchPage').classList.add('hide')
@@ -36,17 +51,18 @@ function searchApi() {
         console.log(response);
         var ballInfo = response.api.players[0]
         console.log(ballInfo.heightInMeters)
-        document.querySelector("#name").innerHTML = `<h3>Full Name: ${ballInfo.firstName} ${ballInfo.lastName}</h3>`
-        document.querySelector(".info").innerHTML = 
-        `<p>Date of Birth: ${ballInfo.dateOfBirth}</p>
+        $('#name').html(`<h3>Full Name: ${ballInfo.firstName} ${ballInfo.lastName}</h3>`)
+        $('#info').html(`
+        <p>Date of Birth: ${ballInfo.dateOfBirth}</p>
         <p>Height: ${ballInfo.heightInMeters}m</p>
         <p>Weight: ${ballInfo.weightInKilograms}kg</p>
         <p>College name: ${ballInfo.collegeName}</p>
         <p>Country: ${ballInfo.country}</p>
         <p>Years pro: ${ballInfo.yearsPro}</p>
         <p>Jerser number: ${ballInfo.leagues.standard.jersey}</p>
-        <p>Position: ${ballInfo.leagues.standard.pos}</p>
-        `
+        <p>Position: ${ballInfo.leagues.standard.pos}
+        </p>`)
+        
         
     })
 }
@@ -79,10 +95,11 @@ function searchApi2(){
         var soccerInfo = response.data[0]
         console.log(soccerInfo.birthcountry)
         document.querySelector("#soccerName").innerHTML = `<h3>Full Name: ${soccerInfo.display_name}</h3>`
-        document.querySelector(".soccerInfo").innerHTML = 
+        $('#soccerPlayerImg').html(`<img src="${soccerInfo.image_path}">`)
+        document.querySelector("#soccerInfo").innerHTML = 
         `<p>Date of Birth: ${soccerInfo.birthdate}</p>
-        <p>Height: ${soccerInfo.height}m</p>
-        <p>Weight: ${soccerInfo.weight}kg</p>
+        <p>Height: ${soccerInfo.height}</p>
+        <p>Weight: ${soccerInfo.weight}</p>
         <p>Place of Birth: ${soccerInfo.birthplace}, ${soccerInfo.birthcountry}</p>
         <p>Image: ${soccerInfo.image_path}</p>
         `

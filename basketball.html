@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basketball</title>
-    <link  rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link  rel="stylesheet" href="style.css">
 </head>
@@ -19,10 +18,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item ">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="index.html">Home</a>
         </li>
         <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="basketball.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="basketball.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">(current)</span>
               Basketball
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -66,19 +65,23 @@
     </div>
   </section>
 
-  <section class="searchResults box hide">
-    <div class="row">
-      <div class="col-sm-3">
-        <h3 id="name"></h3>
-      <div>
-        <div class="col-sm-6">
-          <p class="info"></p>
-        <div>
+  <section class="searchResults box hide" style="justify-content: start; align-items:flex-start;">
+    <div class=card-grid>
+      <div class="row">
+        <div class="col" id="name"></div>
+        <div class="col" id="playerImg"><img src="#" alt="Player Portrait"></div>
+      </div>
+      <div class="row">
+        <div class="col" id="info"></div>
+      </div>
     </div>
+    
   </section>
+
+  
 </main>
 
-<footer class=" navbar bg-dark d-flex justify-content-center" >
+<footer class="navbar bg-dark d-flex justify-content-center" >
   <p>CopyRight@ Team Dailey,Joon,Nathan,Shaun,Joejo</p>
 </footer>
 
