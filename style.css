@@ -47,7 +47,7 @@ footer{
     grid-row-start: 2;
     grid-row-end: 3;
 
-    align-items: center;
+    /* align-items: center; */
     bottom: 0px;
     margin-top: 20px;
     z-index: 1;
@@ -93,13 +93,13 @@ nav, footer{
 }
 
 .box{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     /* border: 2px solid yellow; */
-    width: 90vw;
-    height: 90vh;
-    position: relative;
-    left: 5%;
-    top: 5%;
+    /* width: 100vw; */
+    height: 100vh;
+    /* position: relative; */
+    /* left: 5%; */
+    /* top: 5%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,7 +113,7 @@ nav, footer{
  opacity: 90%;
  position: relative;
 }
-
+/* 
 #searchImg{
     z-index: 0;
     opacity: 50%;
@@ -122,15 +122,21 @@ nav, footer{
     object-position: 5px 10%;
     height: 833px;
 
+} */
+.searchPageSoccer{
+    background-image: url(https://www.footballtalk.org/wp-content/uploads/2020/07/best-players-in-premier-league-2020.jpg);
+    background-repeat: none;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
-.aside{
-    position: relative;
-    top: 7%;
-    width: 100%;
-    left: 0px;
-    text-align:center;
-    height: 600px;
+.searchPageBasketball{
+    background-image: url(https://www.si.com/.image/t_share/MTY3NTEwNDI2MDM1MTY5MTY2/nba-season-2020.jpg);
+    background-repeat: none;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
 }
 
 .table{
@@ -186,7 +192,7 @@ nav, footer{
 }
 
 
-#info, #soccerInfo{
+#soccerInfo{
     font-size: 16px;
     position: absolute;
     left: 2em;
@@ -217,6 +223,11 @@ nav, footer{
     font-size: 40px;
 }
 
+#playerInfo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .teamInfo {
     font-size: 30px;
     font-weight: bold;
@@ -226,26 +237,53 @@ nav, footer{
     font-size: 25px;
 }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
 #info {
     position: absolute;
     left: 20px;
     margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
 }
+
 .aside{
     padding: 0 20px;
+<<<<<<< HEAD
+    /* position: relative; */
+    /* top: 7%; */
+    width: 100%;
+    /* left: 0px; */
+    height: 600px;
+    text-align:center;
+    
+=======
     height: 1300px;
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
 }
 
 aside div{
     display: flex;
     justify-content: space-around;
     align-items: center;
-
-    
+   
 }
 
+<<<<<<< HEAD
+/* .aside{
+    position: relative;
+    top: 7%;
+    width: 100%;
+    left: 0px;
+    text-align:center;
+    height: 600px;
+} */
+=======
 .standingImg {
     max-width: 25px;
     max-height: 25px;
 }
 
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
