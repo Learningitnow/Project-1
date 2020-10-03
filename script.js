@@ -132,6 +132,8 @@ function bbTeamSearch() {
 		//"x-rapidapi-key": "0b276ca072mshebd5f85a364591cp19a269jsn385a7112a304"
         //}
         //}
+
+//Soccer Player Search and API Call        
 function soccerPlayerSearch(){
 
     var personNameSoccer = document.querySelector("#soccerSearchBox").value
@@ -161,6 +163,7 @@ function soccerPlayerSearch(){
     })
 }
 
+//Soccer Team search and API call
 function soccerTeamSearch(){
 
     var teamNameSoccer = document.querySelector("#soccerSearchTeamBox").value
@@ -179,7 +182,7 @@ function soccerTeamSearch(){
         console.log(response);
         var soccerTeamInfo = response.data[0]
         console.log(soccerTeamInfo.name)
-        document.querySelector("#soccerName").innerHTML = `<h3>Full Name: ${soccerTeamInfo.name}</h3>`
+        document.querySelector("#soccerName").innerHTML = `<h2>Full Name: ${soccerTeamInfo.name}</h2>`
         $('#soccerTeamImg').html(`<img src="${soccerTeamInfo.logo_path}">`)
         document.querySelector("#soccerInfo").innerHTML = 
         `<p>Year Founded: ${soccerTeamInfo.founded}</p>

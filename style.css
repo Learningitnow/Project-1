@@ -144,10 +144,29 @@ nav, footer{
     top: 50px;
 }
 
+/*Soccer Card CSS*/
 #name, #soccerName{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 1em;
+    top: .5em;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
+.soccerResults {
+    background-image: url('https://d25qe19fo1nsn4.cloudfront.net/wp-content/uploads/2016/10/US-Soccer-Federation.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.input-group-append  {
+    bottom: 1em;
+}
+
+#soccerInfo p {
+    font-size: 25px;
+    font-weight: 500;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
 
 #playerImg, #soccerPlayerImg{
@@ -158,16 +177,17 @@ nav, footer{
 
 #soccerTeamImg img {
     margin-top: 4em;
-    margin-left: 1em;
     width: 15em;
-    height: 15em;    
+    height: 15em; 
+    margin-left: 1em;  
 }
+
 
 #info, #soccerInfo{
     font-size: 16px;
     position: absolute;
-    right: 10px;
-    top: 75px;
+    left: 2em;
+    top: 20em;
 }
 
 #soccerSearch{

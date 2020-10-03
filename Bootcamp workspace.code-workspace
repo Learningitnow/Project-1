@@ -8,7 +8,12 @@
 		},
 		{
 			"path": "..\\..\\PREWORK_NJP"
+		},
+		{
+			"path": "../Homework/Shaun-Portfolio"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bootcamp"
+	}
 }
