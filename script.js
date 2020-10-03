@@ -145,7 +145,7 @@ function soccerPlayerSearch(){
         method: "GET",
         headers: {
             "x-rapidapi-host": "football-pro.p.rapidapi.com",
-            "x-rapidapi-key": "b5a492aa05msh6869ac7f6671576p14fe03jsn3366a114fc88",
+            "x-rapidapi-key": "0b276ca072mshebd5f85a364591cp19a269jsn385a7112a304",
         }
     })
         .then(function(response) { 

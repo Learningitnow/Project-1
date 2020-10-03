@@ -159,8 +159,8 @@ nav, footer{
     background-size: cover;
 }
 
-.input-group-append  {
-    bottom: 1em;
+.input-group-append {
+    right: 0;
 }
 
 #soccerInfo p {
@@ -170,9 +170,12 @@ nav, footer{
 }
 
 #playerImg, #soccerPlayerImg{
+    background-color: rgb(181, 212, 118);
+    border: 3px solid black;
+    border-radius: 5px;
     position: absolute;
-    left: 10px;
-    top: 100px;
+    left: 1.5em;
+    top: 6em;
 }
 
 #soccerTeamImg img {
