@@ -183,7 +183,7 @@ function soccerTeamSearch(){
         $('#soccerTeamImg').html(`<img src="${soccerTeamInfo.logo_path}">`)
         document.querySelector("#soccerInfo").innerHTML = 
         `<p>Year Founded: ${soccerTeamInfo.founded}</p>
-        <p>Follow ${soccerTeamInfo.name} here: ${soccerTeamInfo.twitter}</p>
+        <p>Follow ${soccerTeamInfo.name} here: <a href="https://www.twitter.com/${soccerTeamInfo.twitter}" target="_blank">${soccerTeamInfo.twitter}</a></p>
         `
 
     })
