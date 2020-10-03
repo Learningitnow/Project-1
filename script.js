@@ -40,17 +40,16 @@ function bbPlayerSearch() {
         console.log(response);
         var ballInfo = response.api.players[0]
         console.log(ballInfo.heightInMeters)
-        $('#name').html(`<h1>${ballInfo.firstName} ${ballInfo.lastName}</h1>`)
+        $('#bbName').html(`<h1>${ballInfo.firstName} ${ballInfo.lastName}</h1>`)
         $('#info').html(`
-        <p class="playerInfo">Date of Birth: ${ballInfo.dateOfBirth}</p>
-        <p>Height: ${ballInfo.heightInMeters}m</p>
-        <p>Weight: ${ballInfo.weightInKilograms}kg</p>
-        <p>College name: ${ballInfo.collegeName}</p>
-        <p>Country: ${ballInfo.country}</p>
-        <p>Years pro: ${ballInfo.yearsPro}</p>
-        <p>Jerser number: ${ballInfo.leagues.standard.jersey}</p>
-        <p>Position: ${ballInfo.leagues.standard.pos}</p>
-        <img src="https://nba-players.herokuapp.com/players/${personName}">`)
+        <li class="playerInfo">Date of Birth: ${ballInfo.dateOfBirth}</li>
+        <li class="playerInfo">Height: ${ballInfo.heightInMeters}m</li>
+        <li class="playerInfo">Weight: ${ballInfo.weightInKilograms}kg</li>
+        <li class="playerInfo">College name: ${ballInfo.collegeName}</li>
+        <li class="playerInfo">Country: ${ballInfo.country}</li>
+        <li class="playerInfo">Years pro: ${ballInfo.yearsPro}</li>
+        <li class="playerInfo">Jerser number: ${ballInfo.leagues.standard.jersey}</li>
+        <li class="playerInfo">Position: ${ballInfo.leagues.standard.pos}</li>`)
     
     })
 }
@@ -284,7 +283,7 @@ function soccerStandingsLLG(){
 
 soccerStandingsBDL()
 soccerStandingsEPL()
-
+soccerStandingsLLG()
 let timer = 5
 
 function countDown(){

@@ -183,7 +183,7 @@ nav, footer{
 }
 
 
-#info, #soccerInfo{
+#soccerInfo{
     font-size: 16px;
     position: absolute;
     left: 2em;
@@ -214,6 +214,11 @@ nav, footer{
     font-size: 40px;
 }
 
+#playerInfo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .teamInfo {
     font-size: 30px;
     font-weight: bold;
@@ -227,7 +232,10 @@ nav, footer{
     position: absolute;
     left: 20px;
     margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
 }
+
 .aside{
     padding: 0 20px;
     height: 1300px;
