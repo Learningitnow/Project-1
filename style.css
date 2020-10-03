@@ -237,7 +237,10 @@ nav, footer{
     font-size: 25px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
 #info {
     position: absolute;
     left: 20px;
@@ -248,6 +251,7 @@ nav, footer{
 
 .aside{
     padding: 0 20px;
+<<<<<<< HEAD
     /* position: relative; */
     /* top: 7%; */
     width: 100%;
@@ -255,7 +259,9 @@ nav, footer{
     height: 600px;
     text-align:center;
     
+=======
     height: 1300px;
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
 }
 
 aside div{
@@ -265,6 +271,7 @@ aside div{
    
 }
 
+<<<<<<< HEAD
 /* .aside{
     position: relative;
     top: 7%;
@@ -273,8 +280,10 @@ aside div{
     text-align:center;
     height: 600px;
 } */
+=======
 .standingImg {
     max-width: 25px;
     max-height: 25px;
 }
 
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
