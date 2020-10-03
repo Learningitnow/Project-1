@@ -285,7 +285,7 @@ function soccerStandingsLLG(){
 soccerStandingsBDL()
 soccerStandingsEPL()
 
-let timer = 5
+let timer = 3
 
 function countDown(){
     console.log("counting down ...")

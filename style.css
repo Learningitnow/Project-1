@@ -25,6 +25,7 @@ background-color: #1f1f2e !important;
     position: relative;
 }
 
+
 .card-grid{
     display: grid;
     margin: 2px, 0;
@@ -92,18 +93,34 @@ nav, footer{
     z-index: 2;
 }
 
-.box{
-    box-sizing: border-box;
-    /* border: 2px solid yellow; */
-    width: 90vw;
-    height: 90vh;
-    position: relative;
-    left: 5%;
-    top: 5%;
+.boxB{
+    /* box-sizing: border-box; */
+    /* width: 100vw; */
+    height: 100vh;
+    /* position: relative; */
+    /* left: 5%; */
+    /* top: 5%; */
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-image: url(https://www.si.com/.image/t_share/MTY3NTEwNDI2MDM1MTY5MTY2/nba-season-2020.jpg);
+    background-repeat: none;
+    background-size: cover;
+}
+
+.boxS{
+    /* box-sizing: border-box; */
+    /* width: 100vw; */
+    height: 100vh;
+    /* position: relative; */
+    /* left: 5%; */
+    /* top: 5%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.footballtalk.org/wp-content/uploads/2020/07/best-players-in-premier-league-2020.jpg);
+    background-size: cover;
+    background-repeat: none;
 }
 
 .searchResults{
