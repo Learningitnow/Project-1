@@ -189,7 +189,104 @@ function soccerTeamSearch(){
     })
 }``
 
+<<<<<<< HEAD
 let timer = 3
+=======
+function soccerStandingsEPL(){
+    var leagueId = "2790"
+
+    $.ajax({
+        url: `https://api-football-v1.p.rapidapi.com/v2/leagueTable/${leagueId}`,
+        async: true,
+        crossDomain: true,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+            "x-rapidapi-key": "476277402fmshd7ca3272bb3a820p1d9269jsn1bc17a240f64"
+        }
+    }) 
+    .then(function(response){
+        var teamPosition = response.api.standings[0]
+
+        for(let i=0; i<teamPosition.length; i++){
+            
+            document.getElementById('epl').innerHTML += `
+            <tr>
+            <td>${teamPosition[i].rank}</td>
+            <td><img class="standingImg" src="${teamPosition[i].logo}"></td>
+            <td>${teamPosition[i].teamName}</td>
+            <td>${teamPosition[i].points}</td>
+            </tr>
+            `
+        }
+    })
+}
+
+function soccerStandingsBDL(){
+    var leagueId = "2755"
+
+    $.ajax({
+        url: `https://api-football-v1.p.rapidapi.com/v2/leagueTable/${leagueId}`,
+        async: true,
+        crossDomain: true,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+            "x-rapidapi-key": "476277402fmshd7ca3272bb3a820p1d9269jsn1bc17a240f64"
+        }
+    }) 
+    .then(function(response){
+        var teamPosition = response.api.standings[0]
+
+        for(let i=0; i<teamPosition.length; i++){
+            
+            document.getElementById('bundesliga').innerHTML += `
+            <tr>
+            <td>${teamPosition[i].rank}</td>
+            <td><img class="standingImg" src="${teamPosition[i].logo}"></td>
+            <td>${teamPosition[i].teamName}</td>
+            <td>${teamPosition[i].points}</td>
+            </tr>
+            `
+        }
+    })
+}
+
+function soccerStandingsLLG(){
+    var leagueId = "2833"
+
+    $.ajax({
+        url: `https://api-football-v1.p.rapidapi.com/v2/leagueTable/${leagueId}`,
+        async: true,
+        crossDomain: true,
+        method: "GET",
+        headers: {
+            "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
+            "x-rapidapi-key": "476277402fmshd7ca3272bb3a820p1d9269jsn1bc17a240f64"
+        }
+    }) 
+    .then(function(response){
+        var teamPosition = response.api.standings[0]
+
+        for(let i=0; i<teamPosition.length; i++){
+            
+            document.getElementById('laliga').innerHTML += `
+            <tr>
+            <td>${teamPosition[i].rank}</td>
+            <td><img class="standingImg" src="${teamPosition[i].logo}"></td>
+            <td>${teamPosition[i].teamName}</td>
+            <td>${teamPosition[i].points}</td>
+            </tr>
+            `
+        }
+    })
+}
+
+soccerStandingsBDL()
+soccerStandingsEPL()
+
+let timer = 5
+>>>>>>> 24144d501a184649534567e829699aefbfbe17bc
 
 function countDown(){
     console.log("counting down ...")
