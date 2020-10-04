@@ -1,3 +1,4 @@
+// Shows player or team cards after searching
 function changeSlide(event){
     event.preventDefault();
 
@@ -20,6 +21,7 @@ function changeSlide(event){
     
 }
 
+// Basketball player API call
 function bbPlayerSearch() { 
     var personName = document.querySelector("#searchBox").value
     console.log(personName)
@@ -35,6 +37,7 @@ function bbPlayerSearch() {
     })
     .then(function(response) {
 
+        // Displays player info on screen
         console.log(response);
         var ballInfo = response.api.players[0]
         console.log(ballInfo.heightInMeters)
@@ -51,6 +54,7 @@ function bbPlayerSearch() {
     })
 }
 
+// Basketball team API call
 function bbTeamSearch() {
     var cityName = document.querySelector("#searchTeamBox").value
        console.log(cityName)
@@ -65,6 +69,8 @@ function bbTeamSearch() {
         } 
     })
     .then(function(response) {
+        
+        // Displays team info
         console.log(response);
         var teamInfo = response.api.teams[0]
         console.log(teamInfo.fullName)
@@ -74,6 +80,7 @@ function bbTeamSearch() {
         <p class="teamInfo">Conference: ${teamInfo.leagues.standard.confName}
         <p class="teamInfo">Division: ${teamInfo.leagues.standard.divName}`)
         
+        // Another API call using team ID to get more info
         function searchStandings() {
             var teamID = teamInfo.teamId
             console.log(`teamID= ${teamID}`)
@@ -87,6 +94,8 @@ function bbTeamSearch() {
                 }
             })
             .then(function(response) {
+                
+                // Displays more team info
                 console.log(response)
                 var teamStandings = response.api.standings[0]
                 $('#standings').html(`<h3><u>Stats for ${teamStandings.seasonYear}</u></h3>
@@ -316,25 +325,3 @@ function countDown(){
 }
 
 countDown()
-
-// async function getUser() {
-//     let user
-//     while (true) {
-//       let name = prompt('Enter a user name', 'rubjo')
-//       try {
-//         user = await loadJson(`https://my.api.com/users/${name}`)
-//         break // No error, exit loop and proceed
-//       } catch (err) {
-//         if (err.response.status === 404) {
-//           // Loop will continue after the alert
-//           alert(`User "${name} not found, please reenter.`)
-//         } else {
-//           // Unknown error, rethrow it
-//           throw err
-//         }
-//       }
-//     }
-  
-//     alert(`Full name: ${user.name}.`)
-//     return user
-//   }
