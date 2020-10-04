@@ -38,7 +38,7 @@ function bbPlayerSearch() {
         console.log(response);
         var ballInfo = response.api.players[0]
         console.log(ballInfo.heightInMeters)
-        $('#name').html(`<h1>${ballInfo.firstName} ${ballInfo.lastName}</h1>`)
+        $('#bbName').html(`<h1>${ballInfo.firstName} ${ballInfo.lastName}</h1>`)
         $('#info').html(`
         <p class="playerInfo">Date of Birth: ${ballInfo.dateOfBirth}</p>
         <p>Height: ${ballInfo.heightInMeters}m</p>
@@ -47,27 +47,10 @@ function bbPlayerSearch() {
         <p>Country: ${ballInfo.country}</p>
         <p>Years pro: ${ballInfo.yearsPro}</p>
         <p>Jerser number: ${ballInfo.leagues.standard.jersey}</p>
-        <p>Position: ${ballInfo.leagues.standard.pos}</p>
-        <img src="https://nba-players.herokuapp.com/players/${personName}">`)
-    
+        <p>Position: ${ballInfo.leagues.standard.pos}</p>`)
     })
 }
 
-// function searchStats() {
-//     var playerID = ballInfo.playerId
-//     $.ajax({
-//         url: `https://api-nba-v1.p.rapidapi.com/players/playerId/${playerID}`,
-//         crossDomain: true,
-//         method: "GET",
-//         headers: {
-//             "x-rapidapi-host": "api-nba-v1.p.rapidapi.com",
-//             "x-rapidapi-key": "b5a492aa05msh6869ac7f6671576p14fe03jsn3366a114fc88"    
-//         }
-//     })
-//     .then(function(response) {
-//         console.log(response)
-//     })
-// }
 function bbTeamSearch() {
     var cityName = document.querySelector("#searchTeamBox").value
        console.log(cityName)
@@ -119,17 +102,6 @@ function bbTeamSearch() {
         searchStandings()
     })
 }
-// }
-//var settings = {
-	//"async": true,
-	//"crossDomain": true,
-	//"url": "https://football-pro.p.rapidapi.com/api/v2.0/players/search/Virgil%2520van%2520Dijk?tz=Europe%252FAmsterdam",
-	//"method": "GET",
-	//"headers": {
-        //"x-rapidapi-host": "football-pro.p.rapidapi.com",
-		//"x-rapidapi-key": "0b276ca072mshebd5f85a364591cp19a269jsn385a7112a304"
-        //}
-        //}
 
 //Soccer Player Search and API Call        
 function soccerPlayerSearch(){
@@ -308,7 +280,7 @@ function bballStandings(){
                 <td>${teamPosition[i].position}</td>
                 <td>${teamPosition[i].team.name}</td>
                 <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
-                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.for}</td>
+                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.against}</td>
                 </tr>
                 `
             } else if (teamPosition[i].group.name === "Eastern Conference") {
@@ -317,7 +289,7 @@ function bballStandings(){
                 <td>${teamPosition[i].position}</td>
                 <td>${teamPosition[i].team.name}</td>
                 <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
-                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.for}</td>
+                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.against}</td>
                 </tr>
                 `
             }
