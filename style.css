@@ -25,6 +25,7 @@ background-color: #1f1f2e !important;
     position: relative;
 }
 
+
 .card-grid{
     display: grid;
     margin: 2px, 0;
@@ -65,7 +66,7 @@ nav, footer{
 }
 
 .bg-dark:hover{
-    color: orange !important;
+    color: red !important;
 }
 
 .card-body{
@@ -92,9 +93,38 @@ nav, footer{
     z-index: 2;
 }
 
+/* .boxB{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.si.com/.image/t_share/MTY3NTEwNDI2MDM1MTY5MTY2/nba-season-2020.jpg);
+    background-repeat: none;
+    background-size: cover;
+} */
+/* 
+.boxS{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.footballtalk.org/wp-content/uploads/2020/07/best-players-in-premier-league-2020.jpg);
+    background-size: cover;
+    background-repeat: none;
+} */
+
 .box{
     box-sizing: border-box;
-    /* border: 2px solid yellow; */
     width: 90vw;
     height: 90vh;
     position: relative;
@@ -103,7 +133,6 @@ nav, footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 
 .searchResults{
@@ -133,15 +162,13 @@ nav, footer{
     height: 600px;
 }
 
-.table{
+table{
     background-color:lightgray;
-    width: 10px !important;
-    height: 1140px;
+    
     border: 2px solid black;
     margin: 2px 2px 2px 2px;
     opacity: 90%;
-    left: 50px;
-    top: 50px;
+    
 }
 
 /*Soccer Card CSS*/

@@ -1,8 +1,6 @@
 function changeSlide(event){
     event.preventDefault();
 
-    console.log(event)
-
     document.querySelector('.searchPage').classList.remove('active-slide')
     document.querySelector('.searchPage').classList.add('hide')
     document.querySelector('.searchResults').classList.add('active-slide')
@@ -192,6 +190,7 @@ function soccerTeamSearch(){
     })
 }``
 
+// EPL Standings API call
 function soccerStandingsEPL(){
     var leagueId = "2790"
 
@@ -222,6 +221,7 @@ function soccerStandingsEPL(){
     })
 }
 
+// Bundesliga Standings API call
 function soccerStandingsBDL(){
     var leagueId = "2755"
 
@@ -252,6 +252,7 @@ function soccerStandingsBDL(){
     })
 }
 
+// Laliga Standings API call
 function soccerStandingsLLG(){
     var leagueId = "2833"
 
@@ -282,13 +283,57 @@ function soccerStandingsLLG(){
     })
 }
 
+// NBA Standings API call
+function bballStandings(){
+    var leagueId = "12"
+    var seasonId = "2019-2020"
+
+    $.ajax({
+        "url": `https://api-basketball.p.rapidapi.com/standings?league=${leagueId}&season=${seasonId}`,
+        "async": true,
+        "crossDomain": true,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "api-basketball.p.rapidapi.com",
+            "x-rapidapi-key": "476277402fmshd7ca3272bb3a820p1d9269jsn1bc17a240f64"
+        }
+    }).then(function(response){
+        var teamPosition = response["response"][0]
+
+        for(let i=0; i<teamPosition.length; i++){
+
+            if(teamPosition[i].group.name === "Western Conference"){
+                document.getElementById('western').innerHTML += `
+                <tr>
+                <td>${teamPosition[i].position}</td>
+                <td>${teamPosition[i].team.name}</td>
+                <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
+                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.for}</td>
+                </tr>
+                `
+            } else if (teamPosition[i].group.name === "Eastern Conference") {
+                document.getElementById('eastern').innerHTML += `
+                <tr>
+                <td>${teamPosition[i].position}</td>
+                <td>${teamPosition[i].team.name}</td>
+                <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
+                <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.for}</td>
+                </tr>
+                `
+            }
+        }
+
+    });
+}
+
+bballStandings()
+soccerStandingsLLG()
 soccerStandingsBDL()
 soccerStandingsEPL()
 
-let timer = 5
+let timer = 3
 
 function countDown(){
-    console.log("counting down ...")
     var timerInterval = setInterval(function(){
         timer--;
         if (timer == 0) {
