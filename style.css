@@ -171,6 +171,14 @@ table{
     
 }
 
+.basketballResults {
+    background-image: url('https://image.freepik.com/free-photo/3d-render-basketball-hit-basket-slow-motion_161488-807.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+
 /*Soccer Card CSS*/
 #name, #soccerName{
     position: absolute;
