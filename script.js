@@ -182,10 +182,11 @@ function soccerStandingsEPL(){
         method: "GET",
         headers: {
             "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-            "x-rapidapi-key": "476277402fmshd7ca3272bb3a820p1d9269jsn1bc17a240f64"
+            "x-rapidapi-key": "0c6b20e27dmsh3f983b81e00663bp1cce71jsn3e3fd47c52f9"
         }
     }) 
     .then(function(response){
+        console.log(response)
         var teamPosition = response.api.standings[0]
 
         for(let i=0; i<teamPosition.length; i++){
