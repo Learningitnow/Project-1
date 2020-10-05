@@ -48,7 +48,7 @@ What is done
 
 
 some of the preview
-![alt text](./Assets/notespn1.png)
-![alt text](./Assets/notespn2.png)
-![alt text](./Assets/notespn3.png)
-![alt text](./Assets/notespn4.png)
+ ![Image](./Assets/notespn1.png)
+ ![Image](./Assets/notespn2.png)
+ ![Image](./Assets/notespn3.png)
+ ![Image](./Assets/notespn4.png)
