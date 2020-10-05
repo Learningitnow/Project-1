@@ -288,8 +288,8 @@ function bballStandings(){
                 document.getElementById('western').innerHTML += `
                 <tr>
                 <td>${teamPosition[i].position}</td>
-                <td>${teamPosition[i].team.name}</td>
                 <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
+                <td>${teamPosition[i].team.name}</td>
                 <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.against}</td>
                 </tr>
                 `
@@ -297,8 +297,8 @@ function bballStandings(){
                 document.getElementById('eastern').innerHTML += `
                 <tr>
                 <td>${teamPosition[i].position}</td>
-                <td>${teamPosition[i].team.name}</td>
                 <td><img class="standingImg" src="${teamPosition[i].team.logo}"></td>
+                <td>${teamPosition[i].team.name}</td>
                 <td>For: ${teamPosition[i].points.for} Against: ${teamPosition[i].points.against}</td>
                 </tr>
                 `
